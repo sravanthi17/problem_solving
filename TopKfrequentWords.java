@@ -1,9 +1,21 @@
 /*
 Top K frequent words : https://leetcode.com/problems/top-k-frequent-words/
  */
+import java.util.*;
 import java.util.stream.*;
-import java.util.LinkedHashMap;
-class Solution {
+
+/*
+ Top K frequent words - https://leetcode.com/problems/top-k-frequent-words/
+ Given a non-empty list of words, return the k most frequent elements.
+
+ Your answer should be sorted by frequency from highest to lowest. If two words have the same frequency, then the word with the lower alphabetical order comes first.
+
+ Example 1:
+ Input: ["i", "love", "leetcode", "i", "love", "coding"], k = 2
+ Output: ["i", "love"]
+ Explanation: "i" and "love" are the two most frequent words.
+ Note that "i" comes before "love" due to a lower alphabetical order.*/
+class TopKfrequentWords {
     public static List<String> topKFrequent(String[] words, int k) {
         Map<String, Integer> countMap = new HashMap();
         for (String word : words) {
